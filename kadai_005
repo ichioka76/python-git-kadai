@@ -1,14 +1,32 @@
-Id CommandLine
-  -- -----------
-   1 try { . "c:\Users\ichio\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\...
-   2 Cd C:\Users\ichio
-   3 mkdir git_challenge
-   4 Cd git_challenge
-   5 git init
-   6 git add hello_world.txt
-   7 git commit -m "hello_world.txtを追加”
-   8 git add hello_world.txt
-   9 git commit -m "日本語訳を追記”
-  10 git log --oneline
+＃　Step1: ローカルリポジトリの作成
+Cd C:\Users\ichio
+mkdir git_challenge
+
+    ディレクトリ: C:\Users\ichio
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2025/04/15     13:07                git_challenge
+
+Cd git_challenge
+git init
+
+＃　Step2: テキストファイルの作成
+echo "Hello,world!" > hello_world.txt
+
+＃　Step3: ファイルの変更とコミット
+git add hello_world.txt
+git commit -m "hello_world.txtを追加”
+[main (root-commit) ecce6bc] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+C:\Users\ichio\git_challenge> git add hello_world.txt
+C:\Users\ichio\git_challenge> git commit -m "日本語訳を追記”
+[main 6a2f56e] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+
+ ＃　Step4: 変更履歴の確認
+git log --oneline
 6a2f56e (HEAD -> main) 日本語訳を追記
 ecce6bc hello_world.txtを追加
